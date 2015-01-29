@@ -4,8 +4,15 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+TDev.org is my personal website, a place to show my interests to the rest of the
+world. My name is Taco Ditiecher and I am a professional software developer
+working for the City of Rotterdam, the Netherlands. My main focus is on the
+Microsoft.NET platform but once in a while I open my eyes and have a look at
+other environments.
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+When I’m not behind my computer I probably can be found in the
+[aikido dojo](http://aikidospijkenisse.nl/) practicing my own techniques or teaching children.
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+Thank you for your interest in me and my website,
+
+Taco.
