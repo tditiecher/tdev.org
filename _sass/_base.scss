@@ -17,7 +17,6 @@ body {
     font-family: $base-font-family;
     font-size: $base-font-size;
     line-height: $base-line-height;
-    font-weight: 300;
     color: $text-color;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
@@ -127,7 +126,8 @@ blockquote {
  */
 pre,
 code {
-    font-size: 15px;
+  font-family: $fixed-font-family;
+    font-size: 14px;
     border: 1px solid $grey-color-light;
     border-radius: 3px;
     background-color: #eef;
@@ -184,21 +184,3 @@ pre {
     }
 }
 
-
-
-/**
- * Icons
- */
-.icon {
-
-    > svg {
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-        vertical-align: middle;
-
-        path {
-            fill: $grey-color;
-        }
-    }
-}
