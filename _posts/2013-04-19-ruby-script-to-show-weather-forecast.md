@@ -1,7 +1,5 @@
 ---
-layout: post
 title:  "Ruby script to show the weather forecasts in your console"
-date:   2013-04-19
 permalink: /2013/ruby-script-to-show-the-dutch-weather-forecasts-in-your-console
 ---
 

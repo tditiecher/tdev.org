@@ -126,8 +126,8 @@ blockquote {
  */
 pre,
 code {
-  font-family: $fixed-font-family;
-    font-size: 14px;
+  font-family: $mono-font-family;
+    font-size: $mono-font-size;
     border: 1px solid $grey-color-light;
     border-radius: 3px;
     background-color: #eef;

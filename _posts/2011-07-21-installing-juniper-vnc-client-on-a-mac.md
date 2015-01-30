@@ -1,7 +1,5 @@
 ---
-layout: post
 title:  "Installing Juniper VNC on a Mac"
-date:   2011-07-21
 permalink: /2011/installing-juniper-vnc-client-on-a-mac
 ---
 

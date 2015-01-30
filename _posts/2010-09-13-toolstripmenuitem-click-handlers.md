@@ -1,7 +1,5 @@
 ---
-layout: post
 title:  "Toolstripmenuitem click handlers"
-date:   2010-09-13
 permalink: /2010/how-to-determine-if-a-toolstripmenuitem-has-handlers-registered-to-its-click-event
 ---
 

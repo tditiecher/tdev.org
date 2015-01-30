@@ -1,7 +1,5 @@
 ---
-layout: post
 title:  "Command line Twitter"
-date:   2009-11-26
 permalink: /2009/command-line-twitter
 ---
 

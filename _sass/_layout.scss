@@ -126,7 +126,7 @@
 }
 
 .post-meta {
-    font-family: $fixed-font-family;
+    font-family: $mono-font-family;
     font-size: $small-font-size;
     color: $grey-color;
 
@@ -175,16 +175,15 @@
 ul.posts {
   list-style-type: none;
   margin-bottom: 2em;
-}
-
-  ul.posts li {
+  
+  li {
     line-height: 1.75em;
   }
-
-  ul.posts span {
+  
+  span {
     color: #aaa;
-    font-family: $fixed-font-family;
+    font-family: $mono-font-family;
     font-size: 90%;
     margin-right: 20px;
-  }
-
+  }  
+}

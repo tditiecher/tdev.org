@@ -1,7 +1,5 @@
 ---
-layout: post
 title:  "Text analysis in Lapsang"
-date:   2010-08-15
 permalink: /2010/text-analysis-in-lapsang
 ---
 

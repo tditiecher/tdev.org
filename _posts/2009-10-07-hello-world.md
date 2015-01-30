@@ -1,7 +1,5 @@
 ---
-layout: post
 title:  "Hello world!"
-date:   2009-10-07
 permalink: /2009/hello-world-2
 ---
 

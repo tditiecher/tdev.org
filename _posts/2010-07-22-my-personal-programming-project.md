@@ -1,7 +1,5 @@
 ---
-layout: post
 title:  "My personal programming project"
-date:   2010-07-22
 permalink: /2010/my-personal-programming-project
 ---
 

@@ -1,7 +1,5 @@
 ---
-layout: post
 title:  "Great developer quote"
-date:   2011-03-18
 permalink: /2011/great-developer-quote
 ---
 

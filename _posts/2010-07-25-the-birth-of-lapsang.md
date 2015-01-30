@@ -1,7 +1,5 @@
 ---
-layout: post
 title:  "The birth of Lapsang"
-date:   2010-07-25
 permalink: /2010/the-birth-of-lapsang
 ---
 

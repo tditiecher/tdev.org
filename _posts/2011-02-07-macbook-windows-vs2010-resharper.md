@@ -1,7 +1,5 @@
 ---
-layout: post
 title:  "Macbook + Windows + VS2010 + Resharper"
-date:   2011-02-07
 permalink: /2011/macbook-windows-vs2010-resharper
 ---
 
