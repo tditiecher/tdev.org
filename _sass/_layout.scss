@@ -39,6 +39,10 @@
         &:not(:first-child) {
             margin-left: 20px;
         }
+
+        i {
+          margin-left: 5px;
+        }
     }
 
     @include media-query($on-palm) {
@@ -247,7 +251,7 @@ ul.posts {
 
   ul.posts span {
     color: #aaa;
-    font-family: "Courier New", monospace;
+    font-family: "Inconsolata", "Courier New", monospace;
     font-size: 80%;
   }
 
