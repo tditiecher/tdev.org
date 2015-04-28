@@ -4,8 +4,9 @@ permalink: /about/
 ---
 
 TDev.org is my personal website, a place to show my interests to the rest of the
-world. My name is Taco Ditiecher and I am a professional software developer
-working for the City of Rotterdam, the Netherlands. My main focus is on the
+world. My name is Taco Ditiecher and I am a technical project leader for the Geomatics team 
+at [Petrotechnical Data Systems](http://www.pds.nl/). Before that I was a software developer
+working for the [City of Rotterdam](http://www.rotterdam.nl/), the Netherlands. My main focus is on the
 Microsoft.NET platform but once in a while I open my eyes and have a look at
 other ecosystems like ruby and javascript.
 
