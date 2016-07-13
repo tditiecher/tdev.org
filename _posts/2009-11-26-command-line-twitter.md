@@ -3,15 +3,15 @@ title:  "Command line Twitter"
 permalink: /2009/command-line-twitter
 ---
 
-Just for the ‘geekiness’ of it I was looking for a way to use Twitter from the Bash shell prompt.
+Just for the 'geekiness' of it I was looking for a way to use Twitter from the Bash shell prompt.
 
 To read your twitter home timeline:
 
-{% highlight bash %}
+``` bash
 curl -s -u userid:password -g http://api.twitter.com/1/statuses/home_timeline.atom
 | xpath -q -e '/feed/entry/title/text()'
 | tac
-{% endhighlight %}
+```
 
 Curl is a tool to transfer data from and to a server. The -s option is to keep it silent. -u userid:password is
 used to send your twitter account/password (warning: this is HTTP basic authentication so not secure).
@@ -23,8 +23,8 @@ prefixed by the sender). The result is extremely readable (at least if the ones 
 
 And to post a tweet:
 
-{% highlight bash %}
+``` bash
 curl -u userid:password -d status="Hello world." http://twitter.com/statuses/update.xml
-{% endhighlight %}
+```
 
 The web interface of Twitter is much more convenient but at least now I know how to use the tools curl and xpath.

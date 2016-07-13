@@ -5,7 +5,7 @@ permalink: /2010/the-birth-of-lapsang
 
 In my previous post I described a personal programming project I was planning.
 I wanted to use Ruby as the programming language of choice, but there are a couple
-of reasons for going back to C#: first, I couldn’t find a working GUI toolkit for
+of reasons for going back to C#: first, I couldn't find a working GUI toolkit for
 Ruby (at least working on my OSX machine). I spent a full day and decided to move
 back to System.Windows.Forms (I can use the Mono implementation). Another reason is,
 as [Michel](http://www.justyouraveragegeek.com/) already commented, a new language

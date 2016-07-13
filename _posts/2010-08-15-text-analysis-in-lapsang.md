@@ -14,9 +14,9 @@ for uninteresting titles it will decrease. Based on this word scores the program
 give a recommendation for new titles. As soon as a title contains words that the program
 saw before it will use the word scores to calculate a recommendation.
 
-Not all words in a title will be used for scoring. Stop words like ‘a’, ‘the’, ‘and’, etc.
+Not all words in a title will be used for scoring. Stop words like 'a', 'the', 'and', etc.
 can be ignored as they add no significant value. How about singular and plural, should
-‘language’ be considered the same word and thus have the same score as ‘languages’? And how
+'language' be considered the same word and thus have the same score as 'languages'? And how
 to handle verbs, how should I deal with present and past? For simplicity matters I will
 assume all titles will be in English as multilingual text analysis is way over my head for
 now :-) Probably it is sufficient to store only the stem of a word. There are various
@@ -37,7 +37,7 @@ I created a temporary project and added references to the Lucene.Net.dll and the
 (for language-specific analysis using stemming). The following code shows the results using
 various analyzers to tokenize a text:
 
-{% highlight c# %}
+``` cs
 using System;
 using System.IO;
 
@@ -77,11 +77,11 @@ static void ShowTokens(string text, Analyzer analyzer)
 }
 }
 }
-{% endhighlight %}
+```
 
 The results when you run this program are as follows:
 
-{% highlight text %}
+```
 My husband is a programmer; I have no idea what that means.
 Lucene.Net.Analysis.WhitespaceAnalyzer
  [My] [husband] [is] [a] [programmer;] [I] [have] [no] [idea] [what] [that] [means.]
@@ -93,6 +93,6 @@ Lucene.Net.Analysis.Standard.StandardAnalyzer
  [my] [husband] [programmer] [i] [have] [idea] [what] [means]
 Lucene.Net.Analysis.Snowball.SnowballAnalyzer
  [my] [husband] [programm] [i] [have] [idea] [what] [mean]
-{% endhighlight %}
+```
 
 The SnowBallAnalyzer suits my needs so now I can start coding the word scoring algorithm.

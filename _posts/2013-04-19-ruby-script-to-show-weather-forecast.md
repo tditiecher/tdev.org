@@ -7,7 +7,7 @@ Just a quick ruby script to show the Dutch weather forecasts for next week using
 html screen scraping gem [nokogiri](http://nokogiri.org/) and a table formatter
 gem called [hirb](https://github.com/cldwalker/hirb).
 
-{% highlight ruby %}
+``` ruby
 require 'rubygems'
 require 'nokogiri'
 require 'open-uri'
@@ -28,7 +28,7 @@ page.css(".realtable")[0].xpath("tr").each do |tr|
 end
 
 puts Hirb::Helpers::AutoTable.render table, :headers=>headers, :description=>false
-{% endhighlight %}
+```
 
 The result in my ZSH (using theme [agnoster](https://gist.github.com/agnoster/3712874))
 looks like this:

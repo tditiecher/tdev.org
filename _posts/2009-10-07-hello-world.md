@@ -5,7 +5,7 @@ permalink: /2009/hello-world-2
 
 Welcome to TDev.org. This is my first post to check if it is possible to use source code in my posts.
 
-{% highlight c# %}
+``` cs
 using System;
 
 namespace HelloWorld
@@ -23,4 +23,4 @@ namespace HelloWorld
         }
     }
 }
-{% endhighlight %}
+```

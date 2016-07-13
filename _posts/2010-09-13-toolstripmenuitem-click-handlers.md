@@ -5,11 +5,11 @@ permalink: /2010/how-to-determine-if-a-toolstripmenuitem-has-handlers-registered
 
 ## How to determine if a toolstripmenuitem has handlers registered to its click event
 
-In one of the WinForms applications I maintain there’s something that annoyed me for quite
+In one of the WinForms applications I maintain there's something that annoyed me for quite
 some time (but I never took the time to fix it). This application has a large menu with
-lots of items. It contains some wellknown submenus (injection points) and there’s a
+lots of items. It contains some wellknown submenus (injection points) and there's a
 mechanism to let modules dynamically inject their menu items. The fact is that the wellknown
-submenus were rendered even if they didn’t have any children resulting in useless menu items
+submenus were rendered even if they didn't have any children resulting in useless menu items
 cluttering up my screen.
 
 So all I had to do is remove the menuitems that have no children and that have no registered
@@ -22,15 +22,15 @@ then from System.Component.ComponentModel.
 
 When you write in your form:
 
-{% highlight c# %}
+``` cs
 // In the actual form
 myToolStripMenuItem.Click += new System.EventHandler(OnMyToolStripIMenuItemClick);
-{% endhighlight %}
+```
 
 the ToolStripItem class adds the handler to the protected property Events of its base class
 (ComponentModel) using EventClick as a key.
 
-{% highlight c# %}
+``` cs
 // In ToolStripItem
 internal static readonly object EventClick;
 
@@ -49,12 +49,12 @@ protected EventHandlerList Events
       return this.events;
    }
 }
-{% endhighlight %}
+```
 
 My first idea was to create a derived class MyToolStripMenuItem so that I could access the
 Events property:
 
-{% highlight c# %}
+``` cs
 public class MyToolStripMenuItem : ToolStripMenuItem
 {
    public bool HasRegisteredHandlersForClickEvent
@@ -66,16 +66,16 @@ public class MyToolStripMenuItem : ToolStripMenuItem
       }
    }
 }
-{% endhighlight %}
+```
 
 The problem is the the key used to access the handlers in the EventHandlerList is
 marked as internal so that my derived class cannot use it. Fortunately reflection can solve
-this, it’s more or less a hack and it is not guaranteed to work in future versions of the
-framework but for now it does the job exactly as I want to. I don’t need a derived class
+this, it's more or less a hack and it is not guaranteed to work in future versions of the
+framework but for now it does the job exactly as I want to. I don't need a derived class
 anymore to access the Events property so I created a static helper method somewhere in our
 framework:
 
-{% highlight c# %}
+``` cs
 public static bool HasRegisteredHandlersForClickEvent(ToolStripItem item)
 {
    // Get the protected Events property and the internal static readonly field EventClick via reflection.
@@ -87,12 +87,12 @@ public static bool HasRegisteredHandlersForClickEvent(ToolStripItem item)
 
    return theDelegate != null && theDelegate.GetInvocationList().Length > 0;
 }
-{% endhighlight %}
+```
 
 And finally the method to remove the nonworking menu items (ie. no children and no handlers
 registered for click event):
 
-{% highlight c# %}
+``` cs
 // First call:  RemoveNonWorkingMenuItems(mainMenu.Items);
 
 public static void RemoveNonWorkingMenuItems(ToolStripItemCollection toolStripItems)
@@ -127,6 +127,6 @@ public static void RemoveNonWorkingMenuItems(ToolStripItemCollection toolStripIt
       toolStripItems.Remove(item);
    }
 }
-{% endhighlight %}
+```
 
 Sorry for the layout of the code snippets but I hope you find it useful.
