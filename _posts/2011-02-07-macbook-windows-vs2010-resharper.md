@@ -12,7 +12,7 @@ Generate Code) as there is no Insert key on a macbook. Today I finally spent
 a couple of minutes to find the key combination for the insert key so that
 I don't need the other keyboard anymore.
 
-{% highlight text %}
+```
 Ins = Fn + Return
 Alt+Ins = Fn+Option+return
 ```
